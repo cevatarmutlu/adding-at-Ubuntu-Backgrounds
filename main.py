@@ -1,6 +1,6 @@
-from focal_wallapapers import focal_wallpapers
-from focal import focal
 from os import getcwd
+from python.focal import Focal
+from python.focal_wallpapers import FocalWallpaper
 
 if __name__ == "__main__":
 
@@ -10,5 +10,5 @@ if __name__ == "__main__":
     focal_path = getcwd() + "/files/focal.xml"
     focal_wallpaper_path = getcwd() + "/files/focal-wallpapers.xml"
 
-    focal_wallpapers(wallpaper_path, focal_wallpaper_path)
-    focal(wallpaper_path, focal_path)
+    FocalWallpaper(focal_wallpaper_path, wallpaper_path).generate()
+    Focal(focal_path, wallpaper_path).generate()
