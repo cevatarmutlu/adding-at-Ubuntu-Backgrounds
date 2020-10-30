@@ -41,12 +41,12 @@ Yapmanız gereken tek şey sadece projeyi indirmek. Ek olarak bir şey kurmanız
 
 > Proje dosyasında orjinal XML dosyaları bulunmaktadır. Canınız istediğinde tekrar eski yapıya dönebilirsiniz.
 
-1. Wallpaperları bir klasörün içine atın ve klasörün dosya yolunu `main.py` dosyasının içindeki `wallpaper_path` dizinine atayın.
-2. `files/` klasörünün içindeki `copyFiles.sh` dosyasını çalıştırın. XML dosyalarını kopyalayın.
-3. `main.py` dosyasını çalıştırın. Yeni XML dosyalarını oluşturun.
-4. `files/` klasörünün içindeki `move.sh` dosyasını çalıştırın. Dosyaları gerekli yerlere taşıyın.
+1. Bütün Wallpaper' ların bulunacağı klasör `Pictures/Wallpapers/` klasörünün altında olmalıdır.
+2. İndirdiğiniz Wallpaperları bir klasörün içine atın ve klasörün dosya yolunu `main.py` dosyasının içindeki `wallpapers_currrent_path` değişkenine atayın.
+3. `bash/` klasörünün içindeki `copyXML.sh` dosyasını çalıştırın. XML dosyalarını kopyalayın. Ardından `copyWallpapers.sh` dosyasını çalıştırın. İlk parametre olarakta indirdiğiniz Wallpaper' ların yolunu verin. Bu sayede indirdiğiniz Wallpaper' lar `Pictures/Wallpapers/` klasörüne kopyalanacaktır.
+4. `main.py` dosyasını çalıştırın. Yeni XML dosyalarını oluşturun.
+5. `bash/` klasörünün içindeki `move.sh` dosyasını çalıştırın ilk parametre olarak indirdiğiniz wallpaper' ların bulunduğu dizini belirtin. Dosyaları gerekli yerlere taşıyın ve gereksiz dosyaları silin.
 
-Not: Wallpaperları tuttuğunuz klasörün içine yeni wallpaperlar eklediğinizde öncekilerle beraber yenileri de XML dosyalarına ekleyecektir.
-
+~~Not: Wallpaperları tuttuğunuz klasörün içine yeni wallpaperlar eklediğinizde öncekilerle beraber yenileri de XML dosyalarına ekleyecektir.~~
 
 <span style='font-size: 20px'>*Gerek görürsem ya da canım isterse geliştirebilirim*</span>
