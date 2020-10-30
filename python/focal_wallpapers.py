@@ -1,8 +1,8 @@
 from python.custom_xml import CustomXML
 
 class FocalWallpaper(CustomXML):
-    def __init__(self, xml_path, wallpapers_path):
-        super().__init__(xml_path, wallpapers_path)
+    def __init__(self, xml_path, wallpapers_folder_path, wallpapers_currrent_path):
+        super().__init__(xml_path, wallpapers_folder_path, wallpapers_currrent_path)
         self.wallpapers_tag = {
             "name": "",
             'filename': "",
@@ -13,7 +13,7 @@ class FocalWallpaper(CustomXML):
         }
 
     def generateWallpapersTags(self):
-        wallpapers_tags = [self.create_element(self.root.makeelement("wallpaper", {}), self.wallpapers_tag, {"name":i.split(".")[0], "filename": self.wallpapers_path + "/" + i}) for i in self.wallpapers_list]
+        wallpapers_tags = [self.create_element(self.root.makeelement("wallpaper", {}), self.wallpapers_tag, {"name":i.split(".")[0], "filename": self.wallpapers_folder_path + "/" + i}) for i in self.wallpapers_list]
         return wallpapers_tags
 
     def generate(self):

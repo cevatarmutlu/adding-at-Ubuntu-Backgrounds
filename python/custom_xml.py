@@ -2,11 +2,12 @@ import xml.etree.ElementTree as ET
 from os import listdir
 
 class CustomXML:
-    def __init__(self, xml_path, wallpapers_path):
+    def __init__(self, xml_path, wallpapers_folder_path, wallpapers_currrent_path):
         self.tree = ET.parse(xml_path)
         self.root = self.tree.getroot()
-        self.wallpapers_path = wallpapers_path
-        self.wallpapers_list = self.get_wallpapers(self.wallpapers_path)
+        self.wallpapers_folder_path = wallpapers_folder_path
+        self.wallpapers_currrent_path = wallpapers_currrent_path
+        self.wallpapers_list = self.get_wallpapers(self.wallpapers_currrent_path)
 
     def get_wallpapers(self, path):
         return listdir(path)
@@ -27,4 +28,4 @@ class CustomXML:
         return element
 
     def __str__(self):
-        return "{self.tree}, {self.root}, {self.wallpapers_path}, {self.wallpapers_list}".format(self=self)
+        return "{self.tree}, {self.root}, {self.wallpapers_folder_path}, {self.wallpapers_currrent_path}, {self.wallpapers_list}".format(self=self)
