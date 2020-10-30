@@ -1,1 +1,2 @@
-cp $1* ~/Pictures/wallpapers/
+#!/bin/bash
+cp -r $1/* $2/

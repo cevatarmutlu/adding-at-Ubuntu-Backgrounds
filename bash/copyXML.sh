@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir "files"
 path=$(pwd)
 sudo cp "/usr/share/gnome-background-properties/focal-wallpapers.xml" "$path/files/focal-wallpapers.xml"
